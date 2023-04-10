@@ -15,6 +15,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/custom.css') }}">
 
+    <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+}
+</style>
 </head>
 
 <body>
@@ -116,8 +133,11 @@
                             data-bs-target="#edit-task-modal" data-source="{{item.id}}" data-content="{{item.task}}"><i
                                 class="fa fa-pen fa-1" aria-hidden="true"></i></button></td>
 
-                    <td><button class="btn btn-outline-secondary btn-sm remove" data-source="{{item.id}}"
-                            type="button">Delete</button></td>
+                    <td>
+                        <button class="btn"><i class="fa fa-trash"></i></button>
+                       <!--<button class="btn btn-outline-secondary btn-sm remove" data-source="{{item.id}}"
+                            type="button">Delete</button>--> 
+                        </td>
                 </tr>
                 {% endfor %}
 
